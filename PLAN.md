@@ -1,8 +1,8 @@
-# DBOGH Website — Implementation Plan
+# GBOGH Website — Implementation Plan
 
 ## Overview
 
-Personal website for a software developer. Tagline: **"Dream big or go home"**.
+Personal website for a software developer. Tagline: **"Go big or go home"**.
 Design theme: **Lovable-inspired** warm cream system with editorial typography and warm gradient atmospherics.
 
 ---
@@ -25,7 +25,7 @@ Design theme: **Lovable-inspired** warm cream system with editorial typography a
 ## Project Structure
 
 ```
-dbogh-website/
+gbogh-website/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx              # Root layout, font loading, global CSS import
@@ -97,7 +97,7 @@ app/ → (home)/_ui/ → shared/ → platform/
 ### 1.1 Project Init
 
 ```bash
-npx create-next-app@latest dbogh-website \
+npx create-next-app@latest gbogh-website \
   --typescript --app --src-dir --no-tailwind --no-eslint \
   --import-alias "@/*"
 ```
@@ -337,7 +337,7 @@ Wrapper for Lucide React icons with consistent sizing.
 
 ### Navigation
 - Sticky on cream background
-- Logo ("DBOGH") left — Inter 600
+- Logo ("GBOGH") left — Inter 600
 - Links right — Inter 400: About, Work, Contact
 - CTA button (primary variant) far right
 - Mobile: hamburger at 768px breakpoint
@@ -540,7 +540,7 @@ export default nextConfig
 
 ## Design Reference
 
-The Pencil design file is at `dbogh-website.pen` in the project root. A 2x PNG export is at `JPLyy.png`.
+The Pencil design file is at `gbogh-website.pen` in the project root. A 2x PNG export is at `JPLyy.png`.
 
 The design follows the **Lovable design system** theme:
 - Warm parchment cream `#f7f4ed` background

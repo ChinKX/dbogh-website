@@ -20,7 +20,7 @@ export function Hero() {
         <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
           <Pill variant="dark">
             <Text variant="mono" color="inverse">
-              DREAM BIG OR GO HOME
+              GO BIG OR GO HOME
             </Text>
           </Pill>
         </motion.div>

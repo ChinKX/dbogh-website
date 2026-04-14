@@ -12,7 +12,7 @@ export function Navigation() {
   return (
     <header className={styles.header}>
       <a href="/" className={styles.logo}>
-        DBOGH
+        GBOGH
       </a>
       <nav className={styles.nav}>
         {navLinks.map((link) => (
