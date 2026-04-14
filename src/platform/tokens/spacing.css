@@ -17,9 +17,25 @@
   --space-36: 9rem;
 
   /* Semantic aliases */
-  --section-padding-x: var(--space-30);
-  --section-padding-y: var(--space-30);
-  --tile-padding: var(--space-9);
+  --section-padding-x: var(--space-5);
+  --section-padding-y: var(--space-16);
+  --tile-padding: var(--space-6);
   --tile-gap: var(--space-4);
   --content-max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-padding-x: var(--space-12);
+    --section-padding-y: var(--space-20);
+    --tile-padding: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding-x: var(--space-30);
+    --section-padding-y: var(--space-30);
+    --tile-padding: var(--space-9);
+  }
 }

@@ -3,9 +3,15 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: var(--space-4);
-  min-height: 340px;
+  min-height: 240px;
   padding: var(--tile-padding);
   border-radius: var(--radius-xl);
+}
+
+@media (min-width: 768px) {
+  .tile {
+    min-height: 340px;
+  }
 }
 
 /* Dark variant */
@@ -76,10 +82,16 @@
 .heading {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
+  font-size: var(--text-xl);
   font-weight: 600;
   line-height: 1.2;
   white-space: pre-line;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--text-3xl);
+  }
 }
 
 /* Description */

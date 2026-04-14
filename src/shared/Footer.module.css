@@ -1,9 +1,18 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: var(--space-4);
   padding: var(--space-6) var(--section-padding-x);
   background-color: var(--color-dark);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .copyright {

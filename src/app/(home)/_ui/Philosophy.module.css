@@ -2,10 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-12);
-  padding: var(--section-padding-y) 15rem;
+  gap: var(--space-8);
+  padding: var(--section-padding-y) var(--section-padding-x);
   max-width: 100%;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .section {
+    gap: var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--section-padding-y) 15rem;
+  }
 }
 
 .gradientLine {
@@ -24,13 +36,19 @@
   padding: 0;
   border: none;
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
+  font-size: var(--text-xl);
   font-weight: 400;
   font-style: italic;
   text-align: center;
   color: var(--color-text-primary);
   line-height: var(--leading-snug);
-  white-space: pre-line;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    font-size: var(--text-3xl);
+    white-space: pre-line;
+  }
 }
 
 .pills {
