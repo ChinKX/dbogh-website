@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--section-padding-y) 15rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.gradientLine {
+  width: 80px;
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, var(--color-text-muted), var(--color-text-primary));
+}
+
+.label {
+  text-align: center;
+}
+
+.quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-text-primary);
+  line-height: var(--leading-snug);
+  white-space: pre-line;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}

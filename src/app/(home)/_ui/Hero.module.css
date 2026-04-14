@@ -1,0 +1,26 @@
+.section {
+  width: 100%;
+  padding: var(--space-36) var(--section-padding-x) var(--space-30);
+  background:
+    radial-gradient(ellipse at 20% 50%, var(--color-gradient-pink) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, var(--color-gradient-lavender) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, var(--color-gradient-blue) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 20%, var(--color-gradient-peach) 0%, transparent 50%),
+    var(--color-bg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.heading {
+  white-space: pre-line;
+}
+
+.subtitle {
+  max-width: 520px;
+}

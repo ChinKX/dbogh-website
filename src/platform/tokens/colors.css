@@ -1,0 +1,27 @@
+:root {
+  /* Surfaces */
+  --color-bg: #f7f4ed;
+  --color-surface: #f7f4ed;
+  --color-surface-subtle: #fafafc;
+
+  /* Text — opacity-based from #1c1c1c */
+  --color-text-primary: #1c1c1c;
+  --color-text-secondary: #5f5f5d;
+  --color-text-muted: rgba(28, 28, 28, 0.4);
+  --color-text-inverse: #fcfbf8;
+  --color-text-inverse-muted: rgba(252, 251, 248, 0.5);
+
+  /* Borders */
+  --color-border: #eceae4;
+  --color-border-interactive: rgba(28, 28, 28, 0.4);
+
+  /* Dark surfaces */
+  --color-dark: #1c1c1c;
+
+  /* Hero gradient mesh colors */
+  --color-gradient-pink: #fce7f3;
+  --color-gradient-peach: #fed7aa;
+  --color-gradient-coral: #fecaca;
+  --color-gradient-lavender: #ddd6fe;
+  --color-gradient-blue: #bfdbfe;
+}

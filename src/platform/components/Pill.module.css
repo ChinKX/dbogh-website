@@ -1,0 +1,27 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-normal);
+  line-height: 1;
+}
+
+.default {
+  background-color: rgba(28, 28, 28, 0.04);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-text-inverse);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+}

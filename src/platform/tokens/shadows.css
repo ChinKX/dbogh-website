@@ -1,0 +1,19 @@
+:root {
+  /* Lovable inset shadow — signature tactile button depth */
+  --shadow-inset-button:
+    inset 0 0.5px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 0 0 0.5px rgba(0, 0, 0, 0.2),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  /* Dark surface inner highlight */
+  --shadow-inset-dark:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  /* Subtle card elevation */
+  --shadow-card:
+    0 2px 8px 0 rgba(0, 0, 0, 0.05);
+
+  /* Focus state — soft warm emphasis */
+  --shadow-focus:
+    0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
