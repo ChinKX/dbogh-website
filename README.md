@@ -1,4 +1,4 @@
-# GBOGH — Go Big or Go Home
+# DBOGH — Dream Big or Go Home
 
 Personal website for a software developer who crafts with intent.
 

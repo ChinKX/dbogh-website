@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <span className={styles.copyright}>
-        &copy; 2026 GBOGH. Go big or go home.
+        &copy; 2026 DBOGH. Dream big or go home.
       </span>
       <div className={styles.socials}>
         {socialLinks.map(({ icon: Icon, href, label }) => (
