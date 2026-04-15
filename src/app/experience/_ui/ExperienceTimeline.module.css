@@ -1,0 +1,141 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--content-max-width);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--tile-padding);
+  border-radius: var(--radius-xl);
+}
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-inset-dark);
+}
+
+.light {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+}
+
+.dark .period {
+  color: var(--color-text-inverse-muted);
+}
+
+.location {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.dark .location {
+  color: var(--color-text-inverse-muted);
+}
+
+.company {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .company {
+    font-size: var(--text-2xl);
+  }
+}
+
+.title {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.dark .title {
+  color: var(--color-text-inverse-muted);
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bullet {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.bullet::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-text-muted);
+}
+
+.dark .bullet {
+  color: rgba(252, 251, 248, 0.7);
+}
+
+.dark .bullet::before {
+  background-color: var(--color-text-inverse-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-normal);
+  line-height: 1;
+  background-color: rgba(28, 28, 28, 0.04);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.dark .tag {
+  background-color: rgba(252, 251, 248, 0.1);
+  color: var(--color-text-inverse);
+  border-color: rgba(252, 251, 248, 0.15);
+}
