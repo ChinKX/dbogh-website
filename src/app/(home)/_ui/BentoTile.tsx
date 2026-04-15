@@ -2,6 +2,7 @@
 
 import type { LucideIcon } from 'lucide-react';
 import { Icon } from '@/platform/components/Icon';
+import { Text } from '@/platform/components/Text';
 import styles from './BentoTile.module.css';
 
 interface BentoTileProps {
@@ -17,9 +18,9 @@ export function BentoTile({ variant, icon, label, heading, description }: BentoT
     <div className={`${styles.tile} ${styles[variant]}`}>
       <div className={styles.labelRow}>
         <Icon icon={icon} size={18} />
-        <span className={styles.label}>{label}</span>
+        <Text variant="mono">{label}</Text>
       </div>
-      <h3 className={styles.heading}>{heading}</h3>
+      <Text variant="subheading" className={styles.heading}>{heading}</Text>
       <p className={styles.description}>{description}</p>
     </div>
   );

@@ -16,13 +16,27 @@ export function Navigation() {
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setMenuOpen(false);
+      };
+      document.addEventListener('keydown', handleKeyDown);
+
+      return () => {
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = '';
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(min-width: 768px)');
+    const handler = () => { if (mql.matches) setMenuOpen(false); };
+    mql.addEventListener('change', handler);
+    return () => mql.removeEventListener('change', handler);
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -41,7 +55,7 @@ export function Navigation() {
 
       {/* Mobile hamburger */}
       <button
-        className={styles.menuButton}
+        className={`${styles.iconButton} ${styles.menuButton}`}
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
       >
@@ -58,7 +72,7 @@ export function Navigation() {
           <nav className={styles.mobileNav}>
             <div className={styles.mobileNavHeader}>
               <button
-                className={styles.closeButton}
+                className={styles.iconButton}
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
               >

@@ -22,13 +22,11 @@ export function CTA() {
         </Text>
       </motion.div>
 
-      <motion.h2
-        className={styles.heading}
-        variants={scaleUp}
-        transition={{ duration: 0.7 }}
-      >
-        Got an idea?{'\n'}Let&apos;s make it real.
-      </motion.h2>
+      <motion.div variants={scaleUp} transition={{ duration: 0.7 }}>
+        <Text variant="heading" color="inverse" className={styles.heading}>
+          Got an idea?{'\n'}Let&apos;s make it real.
+        </Text>
+      </motion.div>
 
       <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
         <Text variant="bodyLarge" className={styles.subtitle}>

@@ -39,8 +39,8 @@
   text-decoration: none;
 }
 
-/* Mobile menu button */
-.menuButton {
+/* Shared icon button reset */
+.iconButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,16 +93,6 @@
   margin-bottom: var(--space-8);
 }
 
-.closeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--space-1);
-  color: var(--color-text-primary);
-}
 
 .mobileNavLinks {
   display: flex;

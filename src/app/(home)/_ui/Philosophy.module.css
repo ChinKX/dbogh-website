@@ -16,7 +16,7 @@
 
 @media (min-width: 1024px) {
   .section {
-    padding: var(--section-padding-y) 15rem;
+    padding: var(--section-padding-y) calc(var(--section-padding-x) * 2);
   }
 }
 
