@@ -1,4 +1,12 @@
-import { Hero, BentoGrid, Philosophy, CTA } from "./_ui";
+import {
+  Hero,
+  BentoGrid,
+  Philosophy,
+  CTA,
+  ExperiencePreview,
+  ProjectsPreview,
+  AboutPreview,
+} from "./_ui";
 import { Divider } from "@/platform/components/Divider";
 
 export default function Home() {
@@ -7,6 +15,9 @@ export default function Home() {
       <Hero />
       <Divider />
       <BentoGrid />
+      <ExperiencePreview />
+      <ProjectsPreview />
+      <AboutPreview />
       <Philosophy />
       <CTA />
     </main>

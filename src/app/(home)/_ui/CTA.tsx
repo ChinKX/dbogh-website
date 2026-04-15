@@ -51,6 +51,7 @@ export function CTA() {
           variant="ghost"
           className={styles.secondaryButton}
           icon={<FileText size={18} />}
+          href="/about"
         >
           View resume
         </Button>
