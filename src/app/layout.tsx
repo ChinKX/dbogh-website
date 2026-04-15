@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
+import { Navigation } from "@/shared/Navigation";
+import { Footer } from "@/shared/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,7 +39,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${geistMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
