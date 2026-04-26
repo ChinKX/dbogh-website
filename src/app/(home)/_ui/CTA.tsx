@@ -44,7 +44,7 @@ export function CTA() {
           variant="surface"
           className={styles.primaryButton}
           icon={<Mail size={18} aria-hidden />}
-          href="mailto:kxiang168@gmail.com"
+          href="mailto:chinkx1205@gmail.com"
         >
           Say hello
         </Button>
