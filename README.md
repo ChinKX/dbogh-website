@@ -58,12 +58,9 @@ src/
     ├── components/               # Primitive UI components
     │   ├── Button.tsx
     │   ├── Text.tsx
-    │   ├── Container.tsx
     │   ├── Pill.tsx
     │   ├── Divider.tsx
     │   └── Icon.tsx
-    ├── hooks/
-    │   └── useScrollReveal.ts
     └── lib/
         └── motion.ts             # Shared Framer Motion variants
 ```
@@ -112,20 +109,26 @@ All styles are driven by CSS custom properties — no hardcoded values in compon
 
 ## Deployment
 
-The site is configured for static export and can be deployed to any hosting platform.
+The site is built as a static export (`output: "export"` in `next.config.ts`) and deployed to **GitHub Pages** via `.github/workflows/deploy.yml`. The custom domain `dbogh.com` is pinned via `public/CNAME`.
 
-### Vercel (recommended)
+### How it works
 
-1. Push to GitHub
-2. Connect repository on [vercel.com](https://vercel.com)
-3. Auto-deploys on every push to `main`
+- Pushes to `main` (touching `src/`, `public/`, config, or the workflow itself) trigger the deploy workflow.
+- `actions/configure-pages` provides `base_path`, which is passed as `NEXT_PUBLIC_BASE_PATH` and consumed by `next.config.ts` for `basePath` / `assetPrefix`.
+- `next build` produces a static site in `out/`, which is uploaded as a Pages artifact and deployed.
 
-### Manual
+### Local production preview
+
+Static export does not run via `next start`. To preview the built output:
 
 ```bash
 npm run build
-# Output in .next/ — serve with `npm run start` or deploy the output
+npx serve out  # or any static file server
 ```
+
+### Manual deploy from local
+
+Not needed — pushes to `main` redeploy automatically. The workflow can also be triggered via `workflow_dispatch` from the Actions tab.
 
 ## License
 

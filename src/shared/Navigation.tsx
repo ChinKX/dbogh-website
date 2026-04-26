@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { withBasePath } from '@/platform/lib/path';
 import styles from '@/shared/Navigation.module.css';
 
 const navLinks = [
@@ -15,21 +15,19 @@ export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+    if (!menuOpen) return;
 
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') setMenuOpen(false);
-      };
-      document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
 
-      return () => {
-        document.body.style.overflow = '';
-        document.removeEventListener('keydown', handleKeyDown);
-      };
-    } else {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
       document.body.style.overflow = '';
-    }
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [menuOpen]);
 
   useEffect(() => {
@@ -41,29 +39,26 @@ export function Navigation() {
 
   return (
     <header className={styles.header}>
-      <a href={withBasePath("/")} className={styles.logo}>
+      <Link href="/" className={styles.logo}>
         DBOGH
-      </a>
+      </Link>
 
-      {/* Desktop nav */}
       <nav className={styles.nav}>
         {navLinks.map((link) => (
-          <a key={link.href} href={withBasePath(link.href)} className={styles.navLink}>
+          <Link key={link.href} href={link.href} className={styles.navLink}>
             {link.label}
-          </a>
+          </Link>
         ))}
       </nav>
 
-      {/* Mobile hamburger */}
       <button
         className={`${styles.iconButton} ${styles.menuButton}`}
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
       >
-        <Menu size={24} />
+        <Menu size={24} aria-hidden />
       </button>
 
-      {/* Mobile overlay + drawer — only rendered when open */}
       {menuOpen && (
         <>
           <div
@@ -77,19 +72,19 @@ export function Navigation() {
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
               >
-                <X size={24} />
+                <X size={24} aria-hidden />
               </button>
             </div>
             <div className={styles.mobileNavLinks}>
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={withBasePath(link.href)}
+                  href={link.href}
                   className={styles.mobileNavLink}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>

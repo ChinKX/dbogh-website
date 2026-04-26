@@ -1,20 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Palette, Server, Lightbulb, Target } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
 import { Text } from '@/platform/components/Text';
 import { fadeUp, staggerContainer } from '@/platform/lib/motion';
 import { tiles } from '../_data/content';
 import { BentoTile } from './BentoTile';
 import styles from './BentoGrid.module.css';
-
-const iconMap: Record<string, LucideIcon> = {
-  Palette,
-  Server,
-  Lightbulb,
-  Target,
-};
 
 export function BentoGrid() {
   return (
@@ -53,7 +44,7 @@ export function BentoGrid() {
           >
             <BentoTile
               variant={tile.variant}
-              icon={iconMap[tile.icon]}
+              icon={tile.icon}
               label={tile.label}
               heading={tile.heading}
               description={tile.description}

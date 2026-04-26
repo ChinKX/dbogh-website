@@ -6,6 +6,7 @@ export interface ExperienceRole {
   bullets: string[];
   tags: string[];
   variant: 'dark' | 'light';
+  tagline?: string;
 }
 
 export const experiences: ExperienceRole[] = [
@@ -14,6 +15,7 @@ export const experiences: ExperienceRole[] = [
     title: 'Frontend Engineer',
     period: '2024 — Present',
     location: 'Kuala Lumpur, Malaysia',
+    tagline: 'Digital banking · Onboarding · CIAM',
     bullets: [
       'Engineered scalable digital banking experiences across mobile and web platforms using React, React Native, and UmiJS.',
       'Spearheaded development for customer onboarding and CIAM (Customer Identity & Access Management) modules.',
@@ -30,6 +32,7 @@ export const experiences: ExperienceRole[] = [
     title: 'Software Engineer (Full-stack)',
     period: '2020 — 2024',
     location: 'Kuala Lumpur, Malaysia',
+    tagline: 'Proptech · VR Tours · Sales Platform',
     bullets: [
       'Architected and maintained Proptech systems including API servers, web applications, and mobile apps using React Native, ReactJS, Node.js, Postgres, MongoDB, and Docker.',
       'Developed digital sales packages, VR room tours, and digital booking forms to boost agent sales.',
@@ -55,8 +58,3 @@ export const experiences: ExperienceRole[] = [
 ];
 
 export const experiencePreview = experiences.slice(0, 2);
-
-export const experienceTaglines: Record<string, string> = {
-  'Ryt Bank': 'Digital banking · Onboarding · CIAM',
-  'Didian Sdn Bhd': 'Proptech · VR Tours · Sales Platform',
-};

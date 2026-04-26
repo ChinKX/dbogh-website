@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Button.module.css";
 
 type ButtonVariant = "primary" | "ghost" | "surface" | "pill";
@@ -10,6 +11,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
 }
 
+function isExternalHref(href: string): boolean {
+  return /^(https?:|mailto:|tel:|#)/.test(href);
+}
+
 export function Button({
   variant = "primary",
   size = "md",
@@ -17,6 +22,7 @@ export function Button({
   icon,
   children,
   className,
+  type,
   ...props
 }: ButtonProps) {
   const classes = [styles.button, styles[variant], styles[size], className]
@@ -24,16 +30,30 @@ export function Button({
     .join(" ");
 
   if (href) {
-    return (
-      <a href={href} className={classes}>
+    const content = (
+      <>
         {children}
         {icon && <span className={styles.icon}>{icon}</span>}
-      </a>
+      </>
+    );
+
+    if (isExternalHref(href)) {
+      return (
+        <a href={href} className={classes}>
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <Link href={href} className={classes}>
+        {content}
+      </Link>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} type={type ?? "button"} {...props}>
       {children}
       {icon && <span className={styles.icon}>{icon}</span>}
     </button>

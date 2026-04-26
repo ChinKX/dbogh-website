@@ -1,12 +1,8 @@
-'use client';
-
-import { Globe, Mail, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import styles from '@/shared/Footer.module.css';
 
 const socialLinks = [
-  { icon: Globe, href: '#', label: 'Website' },
-  { icon: Mail, href: '#', label: 'Email' },
-  { icon: ExternalLink, href: '#', label: 'Links' },
+  { icon: Mail, href: 'mailto:kxiang168@gmail.com', label: 'Email' },
 ];
 
 export function Footer() {
@@ -18,7 +14,7 @@ export function Footer() {
       <div className={styles.socials}>
         {socialLinks.map(({ icon: Icon, href, label }) => (
           <a key={label} href={href} className={styles.socialLink} aria-label={label}>
-            <Icon size={18} />
+            <Icon size={18} aria-hidden />
           </a>
         ))}
       </div>

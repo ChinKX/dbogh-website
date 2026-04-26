@@ -6,6 +6,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Projects — DBOGH',
   description: 'Side projects and personal builds by Chin Kai Xiang.',
+  alternates: { canonical: '/projects' },
 };
 
 export default function ProjectsPage() {
@@ -13,7 +14,7 @@ export default function ProjectsPage() {
     <main className={styles.page}>
       <header className={styles.header}>
         <Text variant="mono" color="muted">PROJECTS</Text>
-        <Text variant="heading">What I&apos;ve built.</Text>
+        <Text variant="heading" as="h1">What I&apos;ve built.</Text>
       </header>
       <ProjectGrid />
     </main>

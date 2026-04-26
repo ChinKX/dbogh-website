@@ -5,7 +5,6 @@ import { Mail, FileText } from 'lucide-react';
 import { Button } from '@/platform/components/Button';
 import { Text } from '@/platform/components/Text';
 import { fadeUp, scaleUp, staggerContainer } from '@/platform/lib/motion';
-import { withBasePath } from '@/platform/lib/path';
 import styles from './CTA.module.css';
 
 export function CTA() {
@@ -44,7 +43,7 @@ export function CTA() {
         <Button
           variant="surface"
           className={styles.primaryButton}
-          icon={<Mail size={18} />}
+          icon={<Mail size={18} aria-hidden />}
           href="mailto:kxiang168@gmail.com"
         >
           Say hello
@@ -52,8 +51,8 @@ export function CTA() {
         <Button
           variant="ghost"
           className={styles.secondaryButton}
-          icon={<FileText size={18} />}
-          href={withBasePath("/about")}
+          icon={<FileText size={18} aria-hidden />}
+          href="/about"
         >
           View resume
         </Button>

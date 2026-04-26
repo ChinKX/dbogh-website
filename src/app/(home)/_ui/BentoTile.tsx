@@ -1,5 +1,3 @@
-'use client';
-
 import type { LucideIcon } from 'lucide-react';
 import { Icon } from '@/platform/components/Icon';
 import { Text } from '@/platform/components/Text';

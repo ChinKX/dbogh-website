@@ -41,7 +41,8 @@ export function Hero() {
         <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
           <Button
             variant="primary"
-            icon={<ArrowRight size={18} />}
+            icon={<ArrowRight size={18} aria-hidden />}
+            href="mailto:kxiang168@gmail.com"
           >
             Get in touch
           </Button>

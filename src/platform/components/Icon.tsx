@@ -6,6 +6,6 @@ interface IconProps {
   className?: string;
 }
 
-export function Icon({ icon: LucideIcon, size = 20, className }: IconProps) {
-  return <LucideIcon size={size} className={className} />;
+export function Icon({ icon: IconComponent, size = 20, className }: IconProps) {
+  return <IconComponent size={size} className={className} aria-hidden />;
 }

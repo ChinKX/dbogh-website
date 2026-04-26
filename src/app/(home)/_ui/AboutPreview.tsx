@@ -1,12 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Text } from '@/platform/components/Text';
 import { fadeUp, staggerContainer } from '@/platform/lib/motion';
-import { withBasePath } from '@/platform/lib/path';
 import { aboutStats } from '@/data/about';
 import styles from './AboutPreview.module.css';
+
+const MotionLink = motion.create(Link);
 
 export function AboutPreview() {
   return (
@@ -40,14 +42,14 @@ export function AboutPreview() {
         ))}
       </motion.div>
 
-      <motion.a
-        href={withBasePath("/about")}
+      <MotionLink
+        href="/about"
         className={styles.link}
         variants={fadeUp}
         transition={{ duration: 0.5 }}
       >
-        More about me <ArrowRight size={16} />
-      </motion.a>
+        More about me <ArrowRight size={16} aria-hidden />
+      </MotionLink>
     </motion.section>
   );
 }
