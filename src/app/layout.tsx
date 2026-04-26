@@ -24,9 +24,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dbogh.com"),
   title: "DBOGH — Dream Big or Go Home",
   description:
     "Software developer who crafts with intent. Pixel-perfect interfaces, scalable backends, creative problem solving.",
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "DBOGH — Dream Big or Go Home",
+    description:
+      "Software developer who crafts with intent. Pixel-perfect interfaces, scalable backends, creative problem solving.",
+  },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

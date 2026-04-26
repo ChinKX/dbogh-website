@@ -33,3 +33,13 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

@@ -9,6 +9,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'About — DBOGH',
   description: 'Education, achievements, skills, and background of Chin Kai Xiang.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {
@@ -16,7 +17,7 @@ export default function AboutPage() {
     <main className={styles.page}>
       <header className={styles.header}>
         <Text variant="mono" color="muted">ABOUT</Text>
-        <Text variant="heading">A bit more about me.</Text>
+        <Text variant="heading" as="h1">A bit more about me.</Text>
       </header>
       <Education />
       <Achievements />

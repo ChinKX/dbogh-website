@@ -1,21 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Layers, Heart, Rocket } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
 import { Text } from '@/platform/components/Text';
 import { Pill } from '@/platform/components/Pill';
 import { Icon } from '@/platform/components/Icon';
 import { fadeUp, fadeIn, staggerContainer } from '@/platform/lib/motion';
 import { philosophyPills } from '../_data/content';
 import styles from './Philosophy.module.css';
-
-const iconMap: Record<string, LucideIcon> = {
-  Code,
-  Layers,
-  Heart,
-  Rocket,
-};
 
 export function Philosophy() {
   return (
@@ -51,7 +42,7 @@ export function Philosophy() {
           <motion.div key={pill.label} variants={fadeUp} transition={{ duration: 0.4 }}>
             <Pill
               variant="default"
-              icon={<Icon icon={iconMap[pill.icon]} size={16} />}
+              icon={<Icon icon={pill.icon} size={16} />}
             >
               {pill.label}
             </Pill>
