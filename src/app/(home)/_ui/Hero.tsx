@@ -42,7 +42,7 @@ export function Hero() {
           <Button
             variant="primary"
             icon={<ArrowRight size={18} aria-hidden />}
-            href="mailto:chinkx1205@gmail.com"
+            href="mailto:kxiang168@gmail.com"
           >
             Get in touch
           </Button>

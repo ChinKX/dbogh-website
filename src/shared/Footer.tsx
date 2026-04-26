@@ -50,7 +50,7 @@ type SocialLink = {
 };
 
 const socialLinks: SocialLink[] = [
-  { icon: Mail, href: 'mailto:chinkx1205@gmail.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:kxiang168@gmail.com', label: 'Email' },
   { icon: XIcon, href: 'https://x.com/chin_kx', label: 'X' },
   { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/chin-kai-xiang', label: 'LinkedIn' },
   { icon: RedditIcon, href: 'https://www.reddit.com/user/Chin-KX', label: 'Reddit' },
