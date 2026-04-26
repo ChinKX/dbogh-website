@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Text } from '@/platform/components/Text';
 import { fadeUp, staggerContainer } from '@/platform/lib/motion';
+import { withBasePath } from '@/platform/lib/path';
 import { aboutStats } from '@/data/about';
 import styles from './AboutPreview.module.css';
 
@@ -40,7 +41,7 @@ export function AboutPreview() {
       </motion.div>
 
       <motion.a
-        href="/about"
+        href={withBasePath("/about")}
         className={styles.link}
         variants={fadeUp}
         transition={{ duration: 0.5 }}

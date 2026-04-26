@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { Text } from '@/platform/components/Text';
 import { Pill } from '@/platform/components/Pill';
 import { fadeUp, staggerContainer } from '@/platform/lib/motion';
+import { withBasePath } from '@/platform/lib/path';
 import { projectsPreview } from '@/data/projects';
 import styles from './ProjectsPreview.module.css';
 
@@ -46,7 +47,7 @@ export function ProjectsPreview() {
       </motion.div>
 
       <motion.a
-        href="/projects"
+        href={withBasePath("/projects")}
         className={styles.link}
         variants={fadeUp}
         transition={{ duration: 0.5 }}

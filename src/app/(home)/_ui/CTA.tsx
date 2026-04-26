@@ -5,6 +5,7 @@ import { Mail, FileText } from 'lucide-react';
 import { Button } from '@/platform/components/Button';
 import { Text } from '@/platform/components/Text';
 import { fadeUp, scaleUp, staggerContainer } from '@/platform/lib/motion';
+import { withBasePath } from '@/platform/lib/path';
 import styles from './CTA.module.css';
 
 export function CTA() {
@@ -52,7 +53,7 @@ export function CTA() {
           variant="ghost"
           className={styles.secondaryButton}
           icon={<FileText size={18} />}
-          href="/about"
+          href={withBasePath("/about")}
         >
           View resume
         </Button>

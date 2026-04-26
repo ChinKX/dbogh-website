@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { withBasePath } from '@/platform/lib/path';
 import styles from '@/shared/Navigation.module.css';
 
 const navLinks = [
@@ -40,14 +41,14 @@ export function Navigation() {
 
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.logo}>
+      <a href={withBasePath("/")} className={styles.logo}>
         DBOGH
       </a>
 
       {/* Desktop nav */}
       <nav className={styles.nav}>
         {navLinks.map((link) => (
-          <a key={link.href} href={link.href} className={styles.navLink}>
+          <a key={link.href} href={withBasePath(link.href)} className={styles.navLink}>
             {link.label}
           </a>
         ))}
@@ -83,7 +84,7 @@ export function Navigation() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={withBasePath(link.href)}
                   className={styles.mobileNavLink}
                   onClick={() => setMenuOpen(false)}
                 >
