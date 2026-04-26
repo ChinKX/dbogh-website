@@ -38,6 +38,8 @@ yarn-error.log*
 
 # claude code
 .claude/
+.superpowers/
+docs/
 
 # typescript
 *.tsbuildinfo
