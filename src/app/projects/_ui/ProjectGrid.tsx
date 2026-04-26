@@ -39,8 +39,8 @@ export function ProjectGrid() {
           <p className={styles.description}>{project.description}</p>
 
           <ul className={styles.highlights}>
-            {project.highlights.map((highlight) => (
-              <li key={highlight.slice(0, 30)} className={styles.highlight}>
+            {project.highlights.map((highlight, idx) => (
+              <li key={`${project.name}-highlight-${idx}`} className={styles.highlight}>
                 {highlight}
               </li>
             ))}

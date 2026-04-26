@@ -29,9 +29,9 @@ export function ExperienceTimeline() {
           </motion.div>
 
           <motion.ul className={styles.bullets} variants={staggerContainer}>
-            {role.bullets.map((bullet) => (
+            {role.bullets.map((bullet, idx) => (
               <motion.li
-                key={bullet.slice(0, 40)}
+                key={`${role.company}-${role.period}-bullet-${idx}`}
                 className={styles.bullet}
                 variants={fadeUp}
                 transition={{ duration: 0.4 }}

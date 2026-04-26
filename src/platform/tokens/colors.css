@@ -3,6 +3,8 @@
   --color-bg: #f7f4ed;
   --color-surface: #f7f4ed;
   --color-surface-subtle: #fafafc;
+  --color-surface-card: #fff;
+  --color-surface-warm: rgba(28, 28, 28, 0.04);
 
   /* Text — opacity-based from #1c1c1c */
   --color-text-primary: #1c1c1c;
