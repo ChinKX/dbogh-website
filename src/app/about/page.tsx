@@ -18,6 +18,9 @@ export default function AboutPage() {
       <header className={styles.header}>
         <Text variant="mono" color="muted">ABOUT</Text>
         <Text variant="heading" as="h1">A bit more about me.</Text>
+        <Text variant="bodyLarge" color="secondary" className={styles.intro}>
+          Hi, I&apos;m Kai — short for Chin Kai Xiang. Here&apos;s the longer version of how I got here, what I&apos;ve learned, and what I&apos;m into outside of code.
+        </Text>
       </header>
       <Education />
       <Achievements />

@@ -27,7 +27,7 @@ export function Hero() {
 
         <motion.div variants={fadeUp} transition={{ duration: 0.6 }}>
           <Text variant="display" className={styles.heading}>
-            Software developer{'\n'}who crafts with intent.
+            Hi, I&apos;m Kai.{'\n'}A software developer who crafts with intent.
           </Text>
         </motion.div>
 
