@@ -32,6 +32,21 @@
   text-align: left;
 }
 
+.logoWrap {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.logo {
+  max-height: 100%;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .name {
   font-family: var(--font-body);
   font-size: var(--text-lg);

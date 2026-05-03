@@ -37,6 +37,11 @@ export function ProjectsPreview() {
             variants={fadeUp}
             transition={{ duration: 0.5 }}
           >
+            {project.logo && (
+              <div className={styles.logoWrap}>
+                <img src={project.logo} alt="" className={styles.logo} />
+              </div>
+            )}
             <h3 className={styles.name}>{project.name}</h3>
             <p className={styles.description}>{project.description}</p>
             <div className={styles.pills}>

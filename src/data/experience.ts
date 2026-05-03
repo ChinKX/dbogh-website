@@ -7,6 +7,7 @@ export interface ExperienceRole {
   tags: string[];
   variant: 'dark' | 'light';
   tagline?: string;
+  logo?: string;
 }
 
 export const experiences: ExperienceRole[] = [
@@ -26,6 +27,7 @@ export const experiences: ExperienceRole[] = [
     ],
     tags: ['React', 'React Native', 'UmiJS', 'Clean Architecture'],
     variant: 'dark',
+    logo: '/logos/rytbank.webp',
   },
   {
     company: 'Didian Sdn Bhd',
@@ -42,6 +44,7 @@ export const experiences: ExperienceRole[] = [
     ],
     tags: ['React Native', 'ReactJS', 'Node.js', 'Postgres', 'MongoDB', 'Docker'],
     variant: 'light',
+    logo: '/logos/didian.webp',
   },
   {
     company: 'Didian Sdn Bhd',
@@ -54,6 +57,7 @@ export const experiences: ExperienceRole[] = [
     ],
     tags: ['SQL', 'Mobile Development'],
     variant: 'light',
+    logo: '/logos/didian.webp',
   },
 ];
 
