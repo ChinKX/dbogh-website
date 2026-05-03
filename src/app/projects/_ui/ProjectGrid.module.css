@@ -22,6 +22,21 @@
   border: 1px solid var(--color-border);
 }
 
+.logoWrap {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.logo {
+  max-height: 100%;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .cardHeader {
   display: flex;
   justify-content: space-between;

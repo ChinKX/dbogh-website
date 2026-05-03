@@ -35,7 +35,7 @@
 @media (min-width: 1024px) {
   :root {
     --section-padding-x: var(--space-30);
-    --section-padding-y: var(--space-30);
+    --section-padding-y: var(--space-24);
     --tile-padding: var(--space-9);
   }
 }

@@ -5,6 +5,7 @@ export interface Project {
   stack: string[];
   highlights: string[];
   featured: boolean;
+  logo?: string;
 }
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
       'Full-stack platform with analytics and CI/CD pipeline.',
     ],
     featured: true,
+    logo: '/logos/myrumahbaru.svg',
   },
   {
     name: 'Grace',
@@ -29,6 +31,19 @@ export const projects: Project[] = [
       'Published on the App Store.',
     ],
     featured: true,
+    logo: '/logos/grace.webp',
+  },
+  {
+    name: 'Hypegienic',
+    url: 'https://www.hypegienic.com/',
+    description: 'Tech-enabled shoe care platform offering cleaning, restoration, and sole protection services.',
+    stack: ['Flutter', 'ReactJS', 'GraphQL', 'Neo4j'],
+    highlights: [
+      'Full-stack build spanning customer mobile app, web platform, and graph-based backend.',
+      'Published on the App Store.',
+    ],
+    featured: false,
+    logo: '/logos/hypegienic.svg',
   },
   {
     name: 'RentSmartProp',
@@ -51,6 +66,7 @@ export const projects: Project[] = [
       'Published on the App Store.',
     ],
     featured: false,
+    logo: '/logos/nutrilite.webp',
   },
 ];
 

@@ -55,6 +55,22 @@
   color: var(--color-text-inverse-muted);
 }
 
+.logoWrap {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: var(--space-2);
+}
+
+.logo {
+  max-height: 100%;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .company {
   font-family: var(--font-body);
   font-size: var(--text-xl);

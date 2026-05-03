@@ -24,6 +24,11 @@ export function ExperienceTimeline() {
           </motion.div>
 
           <motion.div variants={fadeUp} transition={{ duration: 0.5 }}>
+            {role.logo && (
+              <div className={styles.logoWrap}>
+                <img src={role.logo} alt="" className={styles.logo} />
+              </div>
+            )}
             <h3 className={styles.company}>{role.company}</h3>
             <span className={styles.title}>{role.title}</span>
           </motion.div>

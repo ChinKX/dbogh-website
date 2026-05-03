@@ -23,6 +23,11 @@ export function ProjectGrid() {
           variants={fadeUp}
           transition={{ duration: 0.5 }}
         >
+          {project.logo && (
+            <div className={styles.logoWrap}>
+              <img src={project.logo} alt="" className={styles.logo} />
+            </div>
+          )}
           <div className={styles.cardHeader}>
             <h3 className={styles.name}>{project.name}</h3>
             <a

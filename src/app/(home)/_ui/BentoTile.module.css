@@ -1,17 +1,9 @@
 .tile {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: var(--space-4);
-  min-height: 240px;
   padding: var(--tile-padding);
   border-radius: var(--radius-xl);
-}
-
-@media (min-width: 768px) {
-  .tile {
-    min-height: 340px;
-  }
 }
 
 /* Dark variant */
