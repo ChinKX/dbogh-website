@@ -34,6 +34,18 @@ export const projects: Project[] = [
     logo: '/logos/grace.webp',
   },
   {
+    name: 'Hypegienic',
+    url: 'https://www.hypegienic.com/',
+    description: 'Tech-enabled shoe care platform offering cleaning, restoration, and sole protection services.',
+    stack: ['Flutter', 'ReactJS', 'GraphQL', 'Neo4j'],
+    highlights: [
+      'Full-stack build spanning customer mobile app, web platform, and graph-based backend.',
+      'Published on the App Store.',
+    ],
+    featured: false,
+    logo: '/logos/hypegienic.svg',
+  },
+  {
     name: 'RentSmartProp',
     url: 'https://rentsmartprop.com.my/',
     description: 'Tenant management system for landlords to track properties and for tenants to process payments and maintenance.',
@@ -55,18 +67,6 @@ export const projects: Project[] = [
     ],
     featured: false,
     logo: '/logos/nutrilite.webp',
-  },
-  {
-    name: 'Hypegienic',
-    url: 'https://www.hypegienic.com/',
-    description: 'Tech-enabled shoe care platform offering cleaning, restoration, and sole protection services.',
-    stack: ['Flutter', 'ReactJS', 'GraphQL', 'Neo4j'],
-    highlights: [
-      'Full-stack build spanning customer mobile app, web platform, and graph-based backend.',
-      'Published on the App Store.',
-    ],
-    featured: false,
-    logo: '/logos/hypegienic.svg',
   },
 ];
 
